@@ -1,0 +1,123 @@
+/*!
+ * fullPage 2.9.6
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ */
+html.fp-enabled,
+.fp-enabled body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+
+    /*Avoid flicker on slides transitions for mobile phones #336 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+.fp-section {
+    position: relative;
+    -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
+    -moz-box-sizing: border-box; /* <=28 */
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    width: 20%;
+    bottom: 5%;
+    left: 40%;
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+
+#fp-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+#fp-nav ul li {
+    display: inline-block;
+    width: 20%;
+    height: 1rem;
+    margin: 0.5rem;
+    position:relative;
+}
+
+#fp-nav ul li a {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span {
+    height: 0.8rem;
+    width: 0.8rem;
+    margin: -0.3rem 0 0 -0.3rem;
+    border-radius: 100%;
+ }
+
+#fp-nav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 0.4rem;
+    width: 0.4rem;
+    border: 0;
+    background-color: pink;
+    left: 50%;
+    top: 50%;
+    margin: -0.15rem 0 0 -0.15rem;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+#fp-nav ul li:hover a span {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: -0.2rem 0px 0px -0.2rem;
+}
+
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: -0.1rem;
+    color: black;
+    font-size: 0.9rem;
+    font-family: arial, helvetica, sans-serif;
+    white-space: nowrap;
+    max-width: 10rem;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+    cursor: pointer;
+}
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a.active + .fp-tooltip {
+    -webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+    width: auto;
+    opacity: 1;
+}
+#fp-nav ul li .fp-tooltip.right {
+    top: -1rem;
+}
+
+.fp-auto-height.fp-section {
+    height: auto !important;
+}
+
+.fp-responsive .fp-auto-height-responsive.fp-section {
+    height: auto !important;
+}
