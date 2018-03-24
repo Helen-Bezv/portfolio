@@ -6,33 +6,54 @@
 
 	<title>Portfolio - Helen Bezverhaia</title>
 
-      <!-- Main styling-->
+
 			<link rel="stylesheet" href="css/normalize.css">
-			<link rel="stylesheet" href="css/main.css">
 			<link rel="stylesheet" href="css/flexbox.css">
+			<link rel="stylesheet" href="css/main.css">
+			<!--Media queries-->
+			<link rel="stylesheet" href="css/media.css">
        <!--Fonts-->
 			<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 			<link href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323" rel="stylesheet">
+
+
 
 
 </head>
 
 <body onload="loaded()">
 
-
-
+  <div class="navigation-container">
 	<nav class="navigation">
-		<a href="#about" class="navigation-item">about</a>
 		<a href="#work" class="navigation-item">work</a>
-		<a href="#contact" class="navigation-item">contact</a>
+		<a href="#contact" class="navigation-item" id="a-contact">contact</a>
+		<a href="#about" class="navigation-item" id="a-about">about</a>
 	</nav>
+
+		<div id="about-window">
+			<p class="intro"> My name is Helen Bezverhaia and I'm a senior design & business student with a passion for experimental creative direction and/in socially responsible branding.
+      </p>
+			<p class="bio">
+				My education began in Beedie School of Business at Simon Fraser University where I studied management information systems before discovering my passion for design that made me transfer to the School of Interactive Arts & Technology, where I focus on creative direction in branding. <br>
+				Having worked in the area of public dialogue and community engagement, I gained the knowledge and appreciation for social innovation and responsible marketing (read: I want to design for good). In my free time I volunteer at a horse rescue, learn animation, and ride my bike in and around Vancouver, BC.
+			</p>
+			<a href="helen-bezverhaia-resume.pdf" target="_blank" id="resume-link"> download my resume </a>
+
+		</div>
+
+		<div id="contact-window">
+
+		</div>
+
+	 </div>
 
 	<div id="wrapper">
 		<div id="scroller">
+
 			<ul>
 				<li id="about">
-
 					<div class="box">
+
 				      <div class="box-item">
 				          <h1> animationdesigntypographyartdirectionvisualsbranding </h1>
 				          <h1> digitaltypographygraphicdesignillustrationvisualscontent </h1>
@@ -45,40 +66,68 @@
 				          <h1> researchcreativedirectionbrandinggraphicdesignprintdigital </h1>
 				        </div>
 				      </div>
-
-
-
 				</li>
 
 
 
-				<li id="work">Projects</li>
+				<li id="work">
+        <div class="box project-container">
+		        <div class="box-item empty-project">
+							&nbsp;
+						</div>
 
+						<div class="box-item">
+							<div class="box vertical-project-container">
+		        <div class="box-item project">
+							<a class="project-img" href="#">
+							<img src="img/project1-2.jpg" alt="project1-2">
+							<img src="img/project1.jpg" alt="project1">
+							</a>
+						</div>
 
+						<div class="box-item project">
+							<a class="project-img" href="#">
+							<img src="img/project2-2.jpg" alt="project2-2">
+							<img src="img/project2.jpg" alt="project2">
+							</a>
+						</div>
+					</div>
+				</div>
 
-				<li id="contact">Contact</li>
+				</div>
+
+				</li>
+
 			</ul>
+
 		</div>
 	</div>
 
-	<div class="footer">
+    <!-- FOOTER -->
 
-			<p>
-				designed and coded by helen bezverhaia. &copy;
-				<a href="guide.html" target="_blank"> Style guide</a>.
-				<a href="https://github.com/Helen-Bezv/portfolio" target="_blank"> Git </a>
-		 </p>
+		<div class="footer">
 
-	</div>
+				<p>
+					designed and coded by helen bezverhaia. &copy;
+					<a href="guide.html" target="_blank"> Style guide</a>.
+					<a href="https://github.com/Helen-Bezv/portfolio" target="_blank"> Git </a>
+			 </p>
+
+		</div>
 
 
 
+      <!--JAVASCRIPT-->
 
-	<!-- scrolling framework (including all javascript files) is sourced from: https://github.com/cubiq/iscroll
-	the basic html structure of this page is adapted from the horizontal scrolling demo: https://github.com/cubiq/iscroll/blob/master/demos/horizontal/index.html -->
+
+    	<!-- scrolling framework (including all javascript files) is sourced from: https://github.com/cubiq/iscroll
+    	the basic html structure of this page is adapted from the horizontal scrolling demo: https://github.com/cubiq/iscroll/blob/master/demos/horizontal/index.html -->
 
 			<script type="text/javascript" src="js/iscroll.js"></script>
 			<script type="text/javascript" src="js/demoUtils.js"></script>
+      <!-- JQuery-->
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+			<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
 			<script type="text/javascript">
 					var myScroll;
@@ -92,8 +141,63 @@
 			</script>
 
 
+	 		<script>
+						//Toggle visibility of "About" section.
+					 	//Adapted from: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_html_addclass
+				   	// and https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_class
+						$(document).ready(function(){
+						    $('#a-about').click(function(){
+									var about = document.getElementById('about-window');
+						        about.classList.toggle('active');
+
+						    });
+						});
+
+						//Remove bio when user clicks anywhere on the screen
+						//Adapted from: https://stackoverflow.com/questions/6993450/how-to-select-body-except-one-element
+						//and from: https://codepen.io/parthviroja/pen/YqJWxE
+						$('body').click(function(e){
+
+               var about = document.getElementById('about-window');
+
+							if (e.target.id != 'a-about') {
+
+							 if ($('#about-window').hasClass('active')) {about.classList.toggle('active');}
+						 }
+
+					 });
+      </script>
 
 
+
+				 		<script>
+									//Toggle visibility of "Contact" section.
+								 	//Adapted from: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_html_addclass
+							   	// and https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_class
+									$(document).ready(function(){
+									    $('#a-contact').click(function(){
+												var contact = document.getElementById('contact-window');
+									        contact.classList.toggle('turnedOn');
+									    });
+									});
+
+									//Remove bio when user clicks anywhere on the screen
+									//Adapted from: https://stackoverflow.com/questions/6993450/how-to-select-body-except-one-element
+									//and from: https://codepen.io/parthviroja/pen/YqJWxE
+									$('body').click(function(c){
+
+			               var contact = document.getElementById('contact-window');
+
+										if (c.target.id != 'c-about') {
+
+										 if ($('#contact-window').hasClass('turnedOn')) {
+											 contact.classList.toggle('turnedOn');
+
+										 }
+									 }
+
+								 });
+			      </script>
 
 
 </body>

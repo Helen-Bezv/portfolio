@@ -19,37 +19,165 @@ body,ul,li {
 }
 
 body {
-	font-family: 'Cutive Mo', monospace;
+	font-family: Arial, sans-serif;
 	overflow: hidden; /* source: https://github.com/cubiq/iscroll  */
 }
 
+
+
+
 /*positioning for the following elements is sourced from the framework demo: https://github.com/cubiq/iscroll/blob/master/demos/horizontal/index.html */
 .navigation {
-	background: white;
-	border: 1px dashed #ff9393;
-	width:10%;
-	margin: 0;
-	position: absolute;
-	z-index: 2;
-	left: 25rem;
-	top: 10rem;
-	background-color: yellow;
-	box-shadow: 0 4px 4px rgba(255, 147, 147,0.3), 0 4px 4px rgba(255, 147, 147,0.3);
+  width: 25%;
+	border: 1px dashed #d6abcc;
+	background-color: #e6ff28;
+	box-shadow: 0 4px 4px rgba(214, 171, 204,0.8), 0 4px 4px rgba(214, 171, 204,0.8);
 	transition: 0.3s;
 }
 
+
+.navigation-container {
+	width:40%;
+	margin: 0;
+	position: relative;
+	z-index: 2;
+	left: 15rem;
+	top: 7rem;
+}
+
 h1 {
-	font-family: 'Verdana', sans-serif;
+	font-family: Arial, sans-serif;
 	font-size: 5rem;
-	color: pink;
+  font-weight: bold;
 	display: flex;
   margin: 0;
+  color: #d6abcc; /* #726499; */
 }
+
+
+
+h2 {
+	color: #604c5c;
+	display: inline-block;
+	font-weight: 100;
+	margin-bottom: 0.3rem;
+	margin-top: 0.1rem;
+}
+
+ p.intro {
+	font-weight: bold;
+	color: black;
+}
+
+p.bio {
+
+	color: black;
+}
+
+/*Adapted from: http://jsfiddle.net/gd8ba/light/*/
+.project-img img:last-child
+ {
+	   display:none;
+}
+.project-img:hover img:first-child
+ {
+	   display:none;
+}
+.project-img:hover img:last-child {
+	   display:block;
+}
+
+.project-img img, .project-img img:hover  {
+ width: 20rem;
+ padding: 2rem;
+}
+
+
+#contact-window.turnedOn {
+
+	position: absolute;
+	width:100%;
+	margin: 0;
+	z-index: 11;
+	right: 9rem;
+	top: 8rem;
+	display: block;
+	background-color: yellow;
+	border: 1px dashed #d6abcc;
+	box-shadow: 0 4px 4px rgba(214, 171, 204,0.8), 0 4px 4px rgba(214, 171, 204,0.8);
+	padding: 2rem;
+
+}
+
+#contact-window {
+	display: none;
+}
+
+#about-window {
+  display:none;
+
+}
+
+#about-window.active {
+	position: relative;
+	width:100%;
+	margin: 0;
+	z-index: 10;
+	left: 9rem;
+	top: -8rem;
+  display: block;
+
+	border: 1px dashed #d6abcc;
+	background-color: white;
+	box-shadow: 0 4px 4px rgba(214, 171, 204,0.8), 0 4px 4px rgba(214, 171, 204,0.8);
+	padding: 2rem;
+
+	/*FADE IN ANIMATION FOR CONTACT AND ABOUT WINDOWS. Adapted from: https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load*/
+	-webkit-animation: fadein 0.3s; /* Safari, Chrome and Opera > 12.1 */
+			 -moz-animation: fadein 0.3s; /* Firefox < 16 */
+				-ms-animation: fadein 0.3s; /* Internet Explorer */
+				 -o-animation: fadein 0.3s; /* Opera < 12.1 */
+						animation: fadein 0.3s;
+						animation-direction: alternate;
+						animation-timing-function: ease-in-out;
+
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 
 .navigation-item{
 	  text-decoration: none;
 	  padding: 0.75rem 2rem;
-		color: black;
+		color: #604c5c;
 		font-size: 0.9rem;
 		margin: 0;
 		width: 100%;
@@ -63,23 +191,29 @@ h1 {
 
 .navigation:hover {
 	transform: scale(1.2);
-	border: 2px dashed #ff9393;
-	box-shadow: 16px 16px 16px rgba(255, 147, 147,0.8), 16px 16px 16px rgba(255, 147, 147,0.8);
+	border: 2px dashed #d6abcc;
+	box-shadow: 10px 10px 10px rgba(214, 171, 204,0.8), 10px 10px 10px rgba(214, 171, 204,0.8);
 }
 
 
 .footer {
 	position: absolute;
 	z-index: 2;
-	bottom: 2rem;
+	bottom:0vh;
 	right: 0;
-	width: 30%;
-	height: 2rem;
+	width: 100%;
+	height: 4vh;
+	margin-bottom: 0;
+	padding: 0;
   font-size: 0.8rem;
-	background-color: white;
+	background-color: #f7e3eb;
   border: 1px solid black;
 	text-align: center;
-	
+}
+
+.footer p {
+	padding: 0.3rem 0 0 0;
+	margin: 0;
 }
 
 
@@ -98,7 +232,7 @@ h1 {
 	position: absolute;
 	z-index: 1;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	width: 300vw;
+	width: 200vw;
 	height: 100%;
 	background-color: white;
 	-webkit-transform: translateZ(0);
@@ -124,13 +258,32 @@ h1 {
 	width: 100%;
 	height: 100%;
 	text-align: center;
+	background-color: #f7e3eb;
+
+
 }
 #scroller li {
 	display: block;
 	float: left;
 	width: 100vw;
 	height: 100%;
-	border-right: 1px solid #ccc;
-	background-color: #fafafa;
+}
+
+.project-container {
+	width: 100%;
+	display: flex;
+	margin-right: 8rem;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+.project {
+	border: 0 dashed #d6abcc;
+
+}
+
+.empty-project {
+	flex-grow: 2;
+	border: 0px dashed #d6abcc;
 
 }
