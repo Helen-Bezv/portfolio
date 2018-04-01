@@ -2,7 +2,7 @@
 
 html {
 	-ms-touch-action: none; /* adapted from css files associated with the framework: https://github.com/cubiq/iscroll*/
- scroll-behavior: smooth; /*source: https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation/17633941#17633941*/
+ scroll-behavior: smooth; /* source: https://stackoverflow.com/questions/17631417/css-pure-css-scroll-animation/17633941#17633941*/
 }
 
 .row:after {
@@ -28,22 +28,55 @@ body {
 
 /*positioning for the following elements is sourced from the framework demo: https://github.com/cubiq/iscroll/blob/master/demos/horizontal/index.html */
 .navigation {
-  width: 25%;
-	border: 1px dashed #d6abcc;
-	background-color: #e6ff28;
-	box-shadow: 0 4px 4px rgba(214, 171, 204,0.8), 0 4px 4px rgba(214, 171, 204,0.8);
-	transition: 0.3s;
+  width: 100%;
+
+	border: 0px dashed #d6abcc;
+	background-color:  #2a2e54; /* #e6ff28;
+	box-shadow: 0 4px 4px rgba(0,0, 0,0.8), 0 4px 4px rgba(0, 0, 0,0.8); */
+
+
 }
 
 
 .navigation-container {
-	width:40%;
+	width:10%;
 	margin: 0;
 	position: relative;
 	z-index: 2;
 	left: 15rem;
 	top: 7rem;
+	height: 100vh;
+	background-color: #2a2e54;
+	box-shadow: 0 4px 4px rgba(0,0, 0,0.8), 0 4px 4px rgba(0, 0, 0,0.8);
+
 }
+
+
+.navigation-item{
+	  text-decoration: none;
+	  padding: 0.75rem 2rem;
+		color: white;
+		font-size: 0.9rem;
+		margin: 0;
+		width: 100%;
+		text-align: center;
+    transition: 0.3s;
+}
+
+.navigation-item a:active, a:focus, a:hover{
+	  background-color: #393e72;
+}
+
+.navigation-item:hover {
+	transform: scale(1.2);
+	border: 2px dashed #8ddef4; /*#5159a3;
+	/*box-shadow: 10px 10px 10px rgba(214, 171, 204,0.8), 10px 10px 10px rgba(214, 171, 204,0.8);*/
+}
+
+
+
+
+
 
 h1 {
 	font-family: Arial, sans-serif;
@@ -51,7 +84,9 @@ h1 {
   font-weight: bold;
 	display: flex;
   margin: 0;
-  color: #d6abcc; /* #726499; */
+
+  color:rgba(141, 222, 244, 0.9);/* #545647;  #726499;  #d6abcc;*/
+
 }
 
 
@@ -70,9 +105,48 @@ h2 {
 }
 
 p.bio {
-
 	color: black;
 }
+
+
+#contact {
+	position: absolute;
+	top: 0;
+  right: 0;
+  visibility: hidden;
+	height: 20px;
+	width: 20px;
+	z-index: 5;
+}
+
+#very-right {
+
+	background-color: #2a2e54;
+  height: 80vh;
+  box-shadow: 	0 10px 20px rgba(61, 99, 109,0.19), 0 6px 6px rgba(61, 99, 109,0.23); /*google material design box shadow. source: https://codepen.io/sdthornton/pen/wBZdXq*/
+  margin-right: 5rem;
+
+}
+
+.vertical-project-container a {
+	margin: 2rem;
+	display: flex;
+	background-color: black;
+	border: 3px solid white;
+	color: white;
+
+}
+
+img {
+	max-width: 100%;
+}
+
+img.icon {
+
+width: auto;
+height: 2rem;
+}
+
 
 /*Adapted from: http://jsfiddle.net/gd8ba/light/*/
 .project-img img:last-child
@@ -92,26 +166,6 @@ p.bio {
  padding: 2rem;
 }
 
-
-#contact-window.turnedOn {
-
-	position: absolute;
-	width:100%;
-	margin: 0;
-	z-index: 11;
-	right: 9rem;
-	top: 8rem;
-	display: block;
-	background-color: yellow;
-	border: 1px dashed #d6abcc;
-	box-shadow: 0 4px 4px rgba(214, 171, 204,0.8), 0 4px 4px rgba(214, 171, 204,0.8);
-	padding: 2rem;
-
-}
-
-#contact-window {
-	display: none;
-}
 
 #about-window {
   display:none;
@@ -174,27 +228,6 @@ p.bio {
 }
 
 
-.navigation-item{
-	  text-decoration: none;
-	  padding: 0.75rem 2rem;
-		color: #604c5c;
-		font-size: 0.9rem;
-		margin: 0;
-		width: 100%;
-		text-align: center;
-
-}
-
-.navigation-item a:active, a:focus, a:hover{
-	  background-color: white;
-}
-
-.navigation:hover {
-	transform: scale(1.2);
-	border: 2px dashed #d6abcc;
-	box-shadow: 10px 10px 10px rgba(214, 171, 204,0.8), 10px 10px 10px rgba(214, 171, 204,0.8);
-}
-
 
 .footer {
 	position: absolute;
@@ -206,14 +239,21 @@ p.bio {
 	margin-bottom: 0;
 	padding: 0;
   font-size: 0.8rem;
-	background-color: #f7e3eb;
-  border: 1px solid black;
+	background-color: #2a2e54;
+	box-shadow: 0 4px 4px rgba(0,0, 0,0.8), 0 4px 4px rgba(0, 0, 0,0.8);
+  border: 0px solid black;
 	text-align: center;
 }
 
 .footer p {
 	padding: 0.3rem 0 0 0;
 	margin: 0;
+	color: #666ca8;
+}
+
+.footer a {
+
+	color: #666ca8;
 }
 
 
@@ -256,9 +296,13 @@ p.bio {
 	padding: 0;
 	margin: 0;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	text-align: center;
-	background-color: #f7e3eb;
+/*	background-color: #272822; */
+  background-image: url("back2.jpg");
+	background-size: 60vw;
+	background-repeat: repeat;
+	/*  #f7e3eb; */
 
 
 }
@@ -267,6 +311,7 @@ p.bio {
 	float: left;
 	width: 100vw;
 	height: 100%;
+	margin-top: 0;
 }
 
 .project-container {
@@ -283,7 +328,7 @@ p.bio {
 }
 
 .empty-project {
-	flex-grow: 2;
+	flex-grow: 1;
 	border: 0px dashed #d6abcc;
 
 }

@@ -26,7 +26,7 @@
   <div class="navigation-container">
 	<nav class="navigation">
 		<a href="#work" class="navigation-item">work</a>
-		<a href="#contact" class="navigation-item" id="a-contact">contact</a>
+		<a href="#contact" class="navigation-item">contact</a>
 		<a href="#about" class="navigation-item" id="a-about">about</a>
 	</nav>
 
@@ -38,10 +38,6 @@
 				Having worked in the area of public dialogue and community engagement, I gained the knowledge and appreciation for social innovation and responsible marketing (read: I want to design for good). In my free time I volunteer at a horse rescue, learn animation, and ride my bike in and around Vancouver, BC.
 			</p>
 			<a href="helen-bezverhaia-resume.pdf" target="_blank" id="resume-link"> download my resume </a>
-
-		</div>
-
-		<div id="contact-window">
 
 		</div>
 
@@ -70,30 +66,33 @@
 
 
 
-				<li id="work">
+				<li>
         <div class="box project-container">
 		        <div class="box-item empty-project">
 							&nbsp;
 						</div>
 
-						<div class="box-item">
-							<div class="box vertical-project-container">
-		        <div class="box-item project">
-							<a class="project-img" href="#">
-							<img src="img/project1-2.jpg" alt="project1-2">
-							<img src="img/project1.jpg" alt="project1">
-							</a>
-						</div>
+						<div class="box-item" id="very-right">
 
-						<div class="box-item project">
-							<a class="project-img" href="#">
-							<img src="img/project2-2.jpg" alt="project2-2">
-							<img src="img/project2.jpg" alt="project2">
-							</a>
-						</div>
-					</div>
+							<div class="vertical-project-container">
+
+			              <a href="https://www.linkedin.com/in/helen-bezverhaia/" target="_blank">
+											<p> linkedin </p>
+				              <img src="img/l1.png" alt="linkedin icon" class="icon">
+									  </a>
+
+										<a href="https://www.behance.net/helenbezve6212" target="_blank">
+											<p> behance </p>
+											<img src="img/b1.png" alt="behance icon" class="icon">
+							   		</a>
+
+			    		</div>
+
 				</div>
-
+				<!-- Invisible top right corner container -->
+				<div class="box-item" id="contact">
+						<p> &nbsp; </p>
+				</div>
 				</div>
 
 				</li>
@@ -102,6 +101,8 @@
 
 		</div>
 	</div>
+
+
 
     <!-- FOOTER -->
 
@@ -170,35 +171,20 @@
 
 
 
-				 		<script>
-									//Toggle visibility of "Contact" section.
-								 	//Adapted from: https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_html_addclass
-							   	// and https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_class
-									$(document).ready(function(){
-									    $('#a-contact').click(function(){
-												var contact = document.getElementById('contact-window');
-									        contact.classList.toggle('turnedOn');
-									    });
-									});
 
-									//Remove bio when user clicks anywhere on the screen
-									//Adapted from: https://stackoverflow.com/questions/6993450/how-to-select-body-except-one-element
-									//and from: https://codepen.io/parthviroja/pen/YqJWxE
-									$('body').click(function(c){
+<!--  <div class="box-item project">
+	 <a class="project-img" href="#">
+	 <img src="img/project1-2.jpg" alt="project1-2">
+	 <img src="img/project1.jpg" alt="project1">
+	 </a>
+ </div>
 
-			               var contact = document.getElementById('contact-window');
-
-										if (c.target.id != 'c-about') {
-
-										 if ($('#contact-window').hasClass('turnedOn')) {
-											 contact.classList.toggle('turnedOn');
-
-										 }
-									 }
-
-								 });
-			      </script>
-
+ <div class="box-item project">
+	 <a class="project-img" href="#">
+	 <img src="img/project2-2.jpg" alt="project2-2">
+	 <img src="img/project2.jpg" alt="project2">
+	 </a>
+ </div> -->
 
 </body>
 </html>

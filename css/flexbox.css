@@ -25,6 +25,13 @@ some parts are adapted from css files associated with the framework: https://git
 
 }
 
+.box-item1 {
+	-webkit-flex: 1 1 18em;
+	-ms-flex: 1 1 18em;
+	flex: 1 1 10em;
+	padding: 0;
+
+}
 
 
 .box-item {
@@ -37,7 +44,7 @@ some parts are adapted from css files associated with the framework: https://git
 }
 
 .project-container {
-	-webkit-justify-content:  flex-end;
+	-webkit-justify-content:  space-between;
 	-ms-justify-content:  space-between;
 	justify-content: space-between;
 	display: -webkit-flex;
@@ -51,19 +58,26 @@ some parts are adapted from css files associated with the framework: https://git
 	-webkit-flex-flow: row wrap;
 }
 
+
+
 .vertical-project-container {
-	-webkit-justify-content:  center;
-	-ms-justify-content:   center;
-	justify-content:  center;
+	-webkit-justify-content: left;
+	-ms-justify-content: left;
+	justify-content:  left;
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
-	list-style: none;
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-flex-direction: column;
+	list-style: none;
+	-webkit-flex-flow: row wrap;
 }
+
+.vertical-project-container a {
+	  align-items: center;
+}
+
 
 .navigation {
 
