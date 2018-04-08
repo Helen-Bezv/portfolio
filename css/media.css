@@ -1,0 +1,75 @@
+
+@media only screen and (max-width: 900px) {
+
+
+.mobile-navigation {
+display: -webkit-flex;
+display: -ms-flex;
+display: flex;
+
+}
+
+.navigation-container {
+  display: none;
+}
+
+#main-page > .navigation-container {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+
+	width:60%;
+	margin: 0;
+	position: relative;
+	z-index: 2;
+	left: 1rem;
+  right: 1rem;
+	top: 1rem;
+
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content:  center;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  -webkit-flex-flow: row wrap;
+
+  flex-direction: column;
+
+	background-color: #2a2e54;
+	box-shadow: 0 4px 4px rgba(0,0, 0,0.8), 0 4px 4px rgba(0, 0, 0,0.8);
+}
+
+
+.main-page > .navigation-item {
+
+  padding: 0.75rem 2rem;
+  color: white;
+  font-size: 0.9rem;
+  margin: 2rem 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 0.7px solid white;
+  line-height: 0.85;
+}
+
+.main-page > .navigation-item:hover {
+ transform: scale(1);
+ border-bottom: 0.7px solid white;
+ border-left: 0px solid white;
+  border-right: 0px solid white;
+   border-top: 0px solid white;
+}
+
+  #work {
+      border-top: 0px solid white;
+  }
+  #work:hover {
+      border-top: 0px solid white;
+  }
+
+}

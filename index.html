@@ -21,12 +21,12 @@
 
 </head>
 
-<body onload="loaded()">
+<body onload="loaded()" id="main-page">
 
-  <div class="navigation-container">
+  <section class="navigation-container">
 
 
-	<nav class="navigation">
+	<nav class="navigation main-page">
 		<h3> design portfolio of helen bezverhaia </h3>
 		<a href="work.html" class="navigation-item" id="work">work</a>
 		<a href="#contact" class="navigation-item">contact</a>
@@ -35,7 +35,7 @@
 	</nav>
 
 
-
+    <!-- About me window that gets toggled when navigation-item is clicked -->
 		<div id="about-window">
 			<p class="intro"> My name is Helen Bezverhaia and I'm a senior design & business student with a passion for experimental creative direction and/in socially responsible branding.
       </p>
@@ -46,22 +46,23 @@
 			<a href="helen-bezverhaia-resume.pdf" target="_blank" id="resume-link"> download my resume </a>
 
 		</div>
-	 </div>
+	</section>
 
-<!-- Navigation that is toggled in mobile view -->
-	 <nav class="mobile-navigation">
+<!-- Navigation that's toggled in mobile view
+	 <nav class="mobile-navigation-mainpage">
  		<a href="work.html" class="mobile-navigation-item" id="work">work</a>
  		<a href="#contact" class="mobile-navigation-item">contact</a>
  		<a href="#about" class="mobile-navigation-item">about</a>
  	</nav>
-
-	<div id="wrapper">
+-->
+<!-- Main page, horizontal scroll component. HTML markup adapted from:  https://github.com/cubiq/iscroll/blob/master/demos/horizontal/index.html  -->
+	<section id="wrapper">
 		<div id="scroller">
 
 			<ul>
 				<li id="about">
 					<div class="box">
-
+              <!-- Decorative addition to the background -->
 				      <div class="box-item">
 				          <h1> animationdesigntypographyartdirectionvisualsbranding </h1>
 				          <h1> digitaltypographygraphicdesignillustrationvisualscontent </h1>
@@ -78,18 +79,15 @@
 
 
 				<li>
+				<!-- empty section on the left -->
         <div class="box project-container">
 		        <div class="box-item empty-project">
 							&nbsp;
 						</div>
-
+        <!-- section on the right -->
 						<div class="box-item very-right">
-
 							<div class="vertical-project-container">
-
-
-
-	                  <div class="contact-form box-item">
+	                  <section class="contact-form box-item">
                     <!-- Adapted from: https://www.quackit.com/html/codes/html_form_to_email.cfm -->
 										<form method="post" action="index.html#contact"> <!-- action="send_mail.php"-->
 								      <p>
@@ -112,24 +110,23 @@
 											<p><button class="button-animated"> <span> get in touch </span> </button></p>
 										</form>
 
-									</div>
+									</section>
 
 
 			    		</div>
 
 				</div>
-				<!-- Invisible top right corner container -->
-				<div class="box-item" id="contact">
-						<p> &nbsp; </p>
+				<!-- Invisible top right corner container for navigation -->
+										<div class="box-item" id="contact">
+												<p> &nbsp; </p>
+										</div>
 				</div>
-				</div>
-
 				</li>
-
+				<!-- End of horizontal scroll -->
 			</ul>
 
 		</div>
-	</div>
+	</section>
 
 
 

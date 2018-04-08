@@ -108,3 +108,17 @@ some parts are adapted from css files associated with the framework: https://git
 	flex-direction: column;
 
 }
+
+.mobile-navigation {
+
+
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+	-webkit-justify-content: space-evenly;
+	-ms-justify-content: space-evenly;
+	justify-content: space-evenly;
+	flex-direction: row;
+
+}
