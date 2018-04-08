@@ -489,3 +489,17 @@ button {
 	opacity: 1;
 	right: 0;
 }
+
+
+#citations a:hover {
+	color: white;
+}
+
+#citations a {
+	color: #2a2e54;
+}
+
+#citations h1 {
+	color: #2a2e54;
+	margin: 2rem;
+}
