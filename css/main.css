@@ -29,11 +29,7 @@ body {
 /*positioning for the following elements is sourced from the framework demo: https://github.com/cubiq/iscroll/blob/master/demos/horizontal/index.html */
 .navigation {
   width: 100%;
-
-	border: 0px dashed #d6abcc;
-	background-color:  #2a2e54; /* #e6ff28;
-	box-shadow: 0 4px 4px rgba(0,0, 0,0.8), 0 4px 4px rgba(0, 0, 0,0.8); */
-
+	background-color: #2a2e54;
 
 }
 
@@ -63,8 +59,25 @@ body {
     transition: 0.3s;
 		border-bottom: 0.7px solid white;
     line-height: 0.85;
-
 }
+
+#home-icon:hover {
+	  transform: scale(1);
+		border-bottom: 0.7px solid white;
+		border-top: 0px solid white;
+		border-left: 0px solid white;
+		border-right: 0px solid white;
+}
+
+#home-icon img:hover {
+	transform: scale(1.3);
+}
+
+#work {
+	  border-top: 0.7px solid white;
+}
+#work:hover {
+border-top: 2px solid #666ca8;}
 
 .navigation-item a:active, a:focus, a:hover{
 	  background-color: #393e72;
@@ -72,8 +85,8 @@ body {
 
 .navigation-item:hover {
 	transform: scale(1.2);
-	border: 2px solid #666ca8; /*#5159a3;
-	/*box-shadow: 10px 10px 10px rgba(214, 171, 204,0.8), 10px 10px 10px rgba(214, 171, 204,0.8);*/
+	border: 2px solid #666ca8;
+
 }
 
 
@@ -84,7 +97,7 @@ h1 {
 	display: flex;
   margin: 0;
 
-  color:rgba(141, 222, 244, 0.9);/* #545647;  #726499;  #d6abcc;*/
+  color:rgba(141, 222, 244, 0.8);
 
 }
 
@@ -120,48 +133,43 @@ p.bio {
 	z-index: 5;
 }
 
-#very-right {
+.very-right {
 
 
   height: 80vh;
   margin-right: 5rem;
-	border: 1px dashed #2a2e54;
+	border: 0px dashed #2a2e54;
 	background-color: white;
 	box-shadow: 0 4px 4px rgba(0,0, 0,0.8), 0 4px 4px rgba(0, 0, 0,0.8);
 
 }
 
-button {
-	text-decoration: none;
-	background-color: #2a2e54;
-	color: white;
-	font-weight: bold;
-	border: none;
-	padding: 0.8rem;
-	box-shadow: 0 4px 4px rgba(0,0, 0,0.8), 0 4px 4px rgba(0, 0, 0,0.8);
-}
 
-.vertical-project-container a {
-	margin: 2rem;
-	display: flex;
-	background-color: black;
-	border: 3px solid white;
-	color: white;
 
-}
 
 img {
 	max-width: 100%;
+
 }
 
-img.icon {
-
-width: auto;
-height: 2rem;
+h2.project-title {
+	color: white;
+  letter-spacing: 2px;
+	text-align: right;
 }
 
+p.project-title {
+	color: white;
+  letter-spacing: 2px;
+	text-align: right;
+	
+}
 
-/*Adapted from: http://jsfiddle.net/gd8ba/light/*/
+.overlay-link {
+	text-decoration: none;
+}
+
+/*Adapted from: http://jsfiddle.net/gd8ba/light/
 .project-img img:last-child
  {
 	   display:none;
@@ -178,7 +186,7 @@ height: 2rem;
  width: 20rem;
  padding: 2rem;
 }
-
+*/
 
 #about-window {
   display:none;
@@ -240,10 +248,6 @@ height: 2rem;
     to   { opacity: 1; }
 }
 
-.contact-form {
-	/*background-color: #666ca8;*/
-	border: 2px dashed white;
-}
 
 form {
 	color: #2a2e54;
@@ -258,7 +262,11 @@ textarea {
  width: 80%;
  max-width: 95%;
  resize: none;
- height: 7rem;
+ height: 10rem;
+}
+
+figure {
+	display: flex;
 }
 
 .footer {
@@ -330,11 +338,10 @@ textarea {
 	width: 100%;
 	height: 100vh;
 	text-align: center;
-/*	background-color: #272822; */
   background-image: url("back2.jpg");
 	background-size: 60vw;
 	background-repeat: repeat;
-	/*  #f7e3eb; */
+
 
 
 }
@@ -354,13 +361,105 @@ textarea {
 	margin-bottom: 3rem;
 }
 
-.project {
-	border: 0 dashed #d6abcc;
+.project-type {
+	background-color: #2a2e54;
+	margin: 5rem;
+	box-shadow: 0 2px 4px rgba(0,0, 0,0.8), 0 2px 4px rgba(0, 0, 0,0.8);
+  position: relative;
+}
+/*overlay effect on hover adapted from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade*/
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+	z-index: 5;
+  transition: .3s ease;
+  background-color: rgba(42, 46, 84, 0.9);
+	box-shadow: 0 2px 4px rgba(0,0, 0,0.85), 0 2px 4px rgba(0, 0, 0,0.85);
+}
+
+.project-type:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+	font-size: 1.3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+	letter-spacing: 2px;
+	padding: 1rem;
+	border: 0.7px solid white;
+}
+.empty-project {
+	flex-grow: 1;
+
+}
+img.icon {
+	max-width: 50%;
+}
+
+.work-page {
+	background-image: url("back2.jpg");
+	background-size: 60vw;
+	background-repeat: repeat;
+}
+
+.empty-project-work {
+	flex-grow: 2;
 
 }
 
-.empty-project {
-	flex-grow: 1;
-	border: 0px dashed #d6abcc;
 
+button {
+	padding: 0.8rem;
+	box-shadow: 0 1px 2px rgba(0,0, 0,0.7), 0 1px 2px rgba(0, 0, 0,0.7);
+}
+
+/* Adapted from: https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1 */
+.button-animated {
+ display: inline-block;
+ padding: 0.3em 0.5em;
+ margin: 1em 0;
+ color: white;
+ background-color:  #2a2e54;
+ border: none;
+ text-decoration: none;
+ -webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+.button-animated span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button-animated span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button-animated:hover span {
+	padding-right: 25px;
+}
+
+.button-animated:hover span:after {
+	opacity: 1;
+	right: 0;
 }

@@ -30,7 +30,7 @@ some parts are adapted from css files associated with the framework: https://git
 	-ms-flex: 1 1 18em;
 	flex: 1 1 10em;
 	padding: 0;
-	
+
 
 }
 
@@ -81,7 +81,11 @@ some parts are adapted from css files associated with the framework: https://git
 	flex-wrap: wrap;
 	list-style: none;
 	-webkit-flex-flow: row wrap;
+
+	flex-direction: column;
 }
+
+
 
 .vertical-project-container a {
 	  align-items: center;
