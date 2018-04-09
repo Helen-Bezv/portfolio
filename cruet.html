@@ -12,6 +12,8 @@
 			<link rel="stylesheet" href="css/main.css">
 			<!--Media queries-->
 			<link rel="stylesheet" href="css/media.css">
+			<!-- Speed optimization -->
+			<script src="js/lazysizes.min.js"></script>
        <!--Fonts-->
 			<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 			<link href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323" rel="stylesheet">
@@ -28,7 +30,6 @@
 				<a href="work.html" class="mobile-navigation-item" id="work">work</a>
 				<a href="#contact" class="mobile-navigation-item">contact</a>
 				<a href="#about" class="mobile-navigation-item">about</a>
-
 			</nav>
 
 
@@ -103,7 +104,7 @@
 				   	 </figure>
 
 						 <figure>
-						 	<img class="project-img" src="img/project1.jpg" alt="a render of the oil cruet">
+						 	<img class="project-img lazyload" data-src="img/project1.jpg" src="img/project1-bad.jpg" alt="a render of the oil cruet">
 						 	<figcaption> final render </figcaption>
 					  </figure>
 		  	</div>
@@ -120,7 +121,7 @@
            <img class="project-img" src="img/sketches.jpg" alt="sketches">
 					</div>
 					<div class="box-item">
-						<img class="project-img" src="img/render2.png" alt="render">
+						<img class="project-img lazyload" data-src="img/render2.png" src="img/render2-bad.png" alt="render">
  					</div>
 		</div>
 	</section>
