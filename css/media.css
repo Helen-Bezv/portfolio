@@ -13,6 +13,15 @@ display: flex;
   display: none;
 }
 
+body {
+  	overflow: scroll;
+}
+
+.empty-project-work {
+	display: none;
+}
+
+
 #main-page > .navigation-container {
   display: flex;
   display: -webkit-flex;
@@ -44,6 +53,9 @@ display: flex;
 	box-shadow: 0 4px 4px rgba(0,0, 0,0.8), 0 4px 4px rgba(0, 0, 0,0.8);
 }
 
+footer {
+  visibility: hidden;
+}
 
 .main-page > .navigation-item {
 
@@ -71,5 +83,32 @@ display: flex;
   #work:hover {
       border-top: 0px solid white;
   }
+
+}
+
+@media only screen and (max-width: 900px) and (min-width: 481px) {
+
+
+  .project-type {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+
+.cruet {
+  margin-top: 0rem;
+}
+
+.project-type {
+  margin-top: 4.5rem;
+  margin-bottom: 0;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
 
 }

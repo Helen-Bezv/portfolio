@@ -103,8 +103,18 @@ border-top: 2px solid #666ca8;
 	position: fixed;
 	width: 100vw;
 	top: 0;
+	height: 3rem;
+	color: white;
   background-color: #2a2e54;
 	z-index: 8;
+}
+
+.mobile-navigation-item {
+  text-decoration: none;
+	color: white;
+	align-self: center;
+
+
 }
 
 
@@ -408,6 +418,28 @@ footer a {
 .project-type:hover .overlay {
   opacity: 1;
 }
+.scroll-down{
+	overflow: scroll;
+}
+
+
+img.project-img  {
+
+    max-width: 90%;
+		align-self: center;
+
+}
+
+figcaption {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	text-align: left;
+  padding: 1rem;
+	background-color: #2a2e54;
+	color: white;
+}
 
 .text {
   color: white;
@@ -423,7 +455,6 @@ footer a {
 }
 .empty-project {
 	flex-grow: 1;
-
 }
 img.icon {
 	max-width: 50%;
@@ -441,11 +472,17 @@ img.icon {
 }
 
 .tedx {
-	background-color: red;
+	background-color: white;
 	z-index: 15;
 	display: flex;
-
 }
+
+.tedx h3 {
+	background-color: white;
+	padding: 0;
+}
+
+
 
 .tedx .box-item {
 	margin: 2rem;
