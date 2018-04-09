@@ -24,15 +24,10 @@ body {
 }
 
 
-
-
-/*positioning for the following elements is sourced from the framework demo: https://github.com/cubiq/iscroll/blob/master/demos/horizontal/index.html */
 .navigation {
   width: 100%;
 	background-color: #2a2e54;
-
 }
-
 
 .navigation-container {
 	width:10%;
@@ -50,7 +45,7 @@ body {
 	background-color: rgba(0,0, 0,0);
 	left: 5rem;
   box-shadow: 0 0 0 rgba(0,0, 0,0), 0 0 0 rgba(0, 0, 0,0);
-
+  height: 10vh;
 }
 
 .navigation.no-horizontal {
@@ -445,6 +440,16 @@ img.icon {
 
 }
 
+.tedx {
+	background-color: red;
+	z-index: 15;
+	display: flex;
+
+}
+
+.tedx .box-item {
+	margin: 2rem;
+}
 
 button {
 	padding: 0.8rem;
